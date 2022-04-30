@@ -15,10 +15,7 @@ import {
   @Route("users")
   export class UsersController extends Controller {
     @Get()
-    public async getUser(
-      @Path() userId: number,
-      @Query() name?: string
-    ){
+    public async getUser(){
       UsersService.getallusers((err:any, result:any) => {
         if (err) {
             return {status:"500",message:"Error", data: err};
